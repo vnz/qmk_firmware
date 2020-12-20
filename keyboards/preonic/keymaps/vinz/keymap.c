@@ -272,11 +272,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
   } else {
     if (clockwise) {
-      register_code(KC_PGDN);
-      unregister_code(KC_PGDN);
+      register_code(KC_VOLD);
+      unregister_code(KC_VOLD);
     } else {
-      register_code(KC_PGUP);
-      unregister_code(KC_PGUP);
+      register_code(KC_VOLU);
+      unregister_code(KC_VOLU);
     }
   }
 }
