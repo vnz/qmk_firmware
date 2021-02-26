@@ -1,3 +1,2 @@
 SRC += muse.c
 UNICODEMAP_ENABLE = yes
-BACKLIGHT_ENABLE = yes

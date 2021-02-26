@@ -85,9 +85,9 @@ const uint32_t PROGMEM unicode_map[] = {
     [UA2]  = 0x00F9,    // ù
     [UA2M] = 0x00D9,    // Ù
     [IA2]  = 0x00EF,    // ï
-    [IA2M] = 0x00CF,    //
+    [IA2M] = 0x00CF,    // Ï
     [UA3]  = 0x00FC,    // ü
-    [UA3M] = 0x00DC,    // 
+    [UA3M] = 0x00DC,    // Ü
     [EA4]  = 0x00EB,    // ë
     [EA4M] = 0x00CB,    // Ë
     [OA2]  = 0x0153,    // œ
@@ -121,7 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | Esc  |   a  |   s  |   d  |   f  |   g  |   h  |   j  |   k  |   l  |   ;  |  '   |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * | Shift|   z  |   x  |   c  |   v  |   b  |   n  |   m  |   ,  |   .  |   /  |Enter |
+ * |Shift |   z  |   x  |   c  |   v  |   b  |   n  |   m  |   ,  |   .  |   /  |Enter |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Ctrl | PgUp | PgDn | Alt  |Space |Lower |Raise |Space | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
@@ -136,22 +136,22 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------------------------------------------------.
- * | Mute |  F1  |   â  |   ê  |   €  |  F5  |   ü  |   ù  |   ï  |   œ  |      |PrtScr|
+ * | Mute |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |PrtScr|
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |      |      |      |   é  |      |   {  |   }  |   û  |   î  |   ô  |      | Del  |
+ * |      |      |      |   é  |   |  |   {  |   }  |   û  |   î  |   ô  |      | Del  |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * | LGUI |   à  |      |   è  |   (  |   [  |   ]  |   )  |   ~  |   +  |   |  |      |
+ * | LGUI |   à  |      |   è  |   (  |   [  |   ]  |   )  |      |      |      |      |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |      |   ç  |      |      |      |      |   `  |   =  |   \  |      |
+ * |      |      |      |   ç  |      |      |      |      |   +  |   =  |   \  |Insert|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      | Home | End  |      |      |      |      |      | Home | PgDn | PgUp | End  |
  * `-----------------------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT_preonic_grid(
-  KC_MUTE, KC_F1,   FR_AA2,  FR_EA3,  EURO,    KC_F5,   FR_UA3,  FR_UA2,  FR_IA2,  FR_OA2,  _______, KC_PSCR,
-  _______, _______, _______, FR_EA1,  _______, KC_LCBR, KC_RCBR, FR_UA1,  FR_IA1,  FR_OA1,  _______, KC_DEL,
-  KC_LGUI, FR_AA1,  _______, FR_EA2,  KC_LPRN, KC_LBRC, KC_RBRC, KC_RPRN, KC_TILD, KC_PLUS, KC_PIPE, _______,
-  _______, _______, _______, FR_CA1,  _______, _______, _______, _______, KC_GRV,  KC_EQL,  KC_BSLS, _______,
+  KC_MUTE, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_PSCR,
+  _______, _______, _______, FR_EA1,  KC_PIPE, KC_LCBR, KC_RCBR, FR_UA1,  FR_IA1,  FR_OA1,  _______, KC_DEL,
+  KC_LGUI, FR_AA1,  _______, FR_EA2,  KC_LPRN, KC_LBRC, KC_RBRC, KC_RPRN, _______, _______, _______, _______,
+  _______, _______, _______, FR_CA1,  _______, _______, _______, _______, KC_PLUS, KC_EQL,  KC_BSLS, KC_INS,
   _______, KC_HOME, KC_END,  _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
 ),
 
@@ -159,7 +159,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |   ~  |   !  |   @  |   #  |   $  |   %  |   ^  |   &  |   *  |   (  |   )  |   _  |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  | Del  |
+ * |      |   Q  |   W  |   E  |   R  |   T  |   Y  |   U  |   I  |   O  |   P  |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
  * | RGUI |   A  |   S  |   D  |   F  |   G  |   H  |   J  |   K  |   L  |   :  |   "  |
  * |------+------+------+------+------+------|------+------+------+------+------+------|
@@ -170,7 +170,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
 [_RAISE] = LAYOUT_preonic_grid(
   KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
-  _______, S(KC_Q), S(KC_W), S(KC_E), S(KC_R), S(KC_T), S(KC_Y), S(KC_U), S(KC_I), S(KC_O), S(KC_P), KC_DEL,
+  _______, S(KC_Q), S(KC_W), S(KC_E), S(KC_R), S(KC_T), S(KC_Y), S(KC_U), S(KC_I), S(KC_O), S(KC_P), _______,
   KC_RGUI, S(KC_A), S(KC_S), S(KC_D), S(KC_F), S(KC_G), S(KC_H), S(KC_J), S(KC_K), S(KC_L), KC_COLN, KC_DQUO,
   _______, S(KC_Z), S(KC_X), S(KC_C), S(KC_V), S(KC_B), S(KC_N), S(KC_M), KC_LABK, KC_RABK, KC_QUES, _______,
   _______, KC_HOME, KC_END,  _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END
@@ -178,23 +178,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Adjust (Lower + Raise)
  * ,-----------------------------------------------------------------------------------.
- * |      |  F1  |  F2  |  F3  |  F4  |  F5  |  F6  |  F7  |  F8  |  F9  |  F10 |      |
+ * |      |  F11 |  F12 |  F13 |  F14 |  F15 |  F16 |  F17 |  F18 |  F19 |  F20 |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |Reset |UC_WIN|      |      |      |      | Mod+ | Hue+ | Bri+ | Sat+ |BLtog |
+ * |Reset |      |      |   €  |      |      |   ü  |   ù  |   ï  |   œ  |      |      |
  * |------+------+------+------+------+-------------+------+------+------+------+------|
- * |CapsLk|      |UC_MAC|      |Insert|      |      | Mod- | Hue- | Bri- | Sat- |      |
+ * |CapsLk|   â  |      |   ê  |      |      |      | Mod+ | Hue+ | Bri+ | Sat+ |Static|
  * |------+------+------+------+------+------|------+------+------+------+------+------|
- * |      |      |UC_LNX|      |      |      | NKRO |Static|      |      |      |RGBtog|
+ * |      |      |      |      |      |      | NKRO | Mod- | Hue- | Bri- | Sat- |RGBtog|
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |
+ * |      |      |      |      |      |      |      |      |UC_MAC|UC_WIN|UC_LNX|      |
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_preonic_grid(
-  _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-  _______, RESET,   UC_M_WC, _______, _______, _______, _______, RGB_MOD, RGB_HUI, RGB_VAI, RGB_SAI, BL_TOGG,
-  KC_CAPS, _______, UC_M_MA, _______, KC_INS,  _______, _______, RGB_RMOD,RGB_HUD, RGB_VAD, RGB_SAD, _______,
-  _______, _______, UC_M_LN, _______, _______, _______, NK_TOGG, RGB_M_P, _______, _______, _______, RGB_TOG,
-  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
+  _______, KC_F11,  KC_F12,  KC_F13,  KC_F14,  KC_F15,  KC_F16,  KC_F17,  KC_F18,  KC_F19,  KC_F20,  _______,
+  RESET,   _______, _______, EURO,    _______, _______, FR_UA3,  FR_UA2,  FR_IA2,  FR_OA2,  _______, _______,
+  KC_CAPS, FR_AA2,  _______, FR_EA3,  _______, _______, _______, RGB_MOD, RGB_HUI, RGB_VAI, RGB_SAI, RGB_M_P,
+  _______, _______, _______, _______, _______, _______, NK_TOGG, RGB_RMOD,RGB_HUD, RGB_VAD, RGB_SAD, RGB_TOG,
+  _______, _______, _______, _______, _______, _______, _______, _______, UC_M_MA, UC_M_WC, UC_M_LN, _______
 )
 
 
@@ -272,11 +272,11 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     }
   } else {
     if (clockwise) {
-      register_code(KC_VOLD);
-      unregister_code(KC_VOLD);
+      register_code(KC_PGDN);
+      unregister_code(KC_PGDN);
     } else {
-      register_code(KC_VOLU);
-      unregister_code(KC_VOLU);
+      register_code(KC_PGUP);
+      unregister_code(KC_PGUP);
     }
   }
 }
