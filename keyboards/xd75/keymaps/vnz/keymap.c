@@ -118,11 +118,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * '-----------------------------------------------------------------------------------------------------------'---------------------------
      */
     [_QW] = LAYOUT_ortho_5x15( /* QWERTY */
-        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS, XXXXXXX, KC_HOME, KC_PGUP,  
-        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC, XXXXXXX, KC_END,  KC_PGDN,
-        KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT, XXXXXXX, XXXXXXX, XXXXXXX,
-        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,  XXXXXXX, KC_UP,   XXXXXXX,
-        KC_LCTL, KC_PGUP, KC_PGDN, KC_LALT, KC_SPC,  MO(_LW), MO(_RS), KC_SPC,  MO(_FN), KC_HOME, KC_END,  KC_DEL,  KC_LEFT, KC_DOWN, KC_RGHT
+        KC_GRV,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    XXXXXXX, KC_DEL,  XXXXXXX, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_MINS,
+        KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    XXXXXXX, KC_HOME, XXXXXXX, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSPC,
+        KC_ESC,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,    XXXXXXX, KC_END,  XXXXXXX, KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+        KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    XXXXXXX, MO(_FN), XXXXXXX, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT,
+        KC_LCTL, KC_PGUP, KC_PGDN, KC_LALT, KC_SPC,  MO(_LW), _______, _______, _______, MO(_RS), KC_SPC,  KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT
     ),
 
     /* LOWER
@@ -139,11 +139,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_LW] = LAYOUT_ortho_5x15( /* LOWER */
-        KC_MUTE, KC_F1,   FR_AA2,  FR_EA3,  EURO,    KC_F5,   FR_UA3,  FR_UA2,  FR_IA2,  FR_OA2,  _______, KC_PSCR, _______, _______, _______,
-        _______, _______, _______, FR_EA1,  _______, KC_LCBR, KC_RCBR, FR_UA1,  FR_IA1,  FR_OA1,  _______, KC_DEL,  _______, _______, _______,
-        KC_LGUI, FR_AA1,  _______, FR_EA2,  KC_LPRN, KC_LBRC, KC_RBRC, KC_RPRN, KC_TILD, KC_PLUS, KC_PIPE, _______, _______, _______, _______,
-        _______, _______, _______, FR_CA1,  _______, _______, _______, _______, KC_GRV,  KC_EQL,  KC_BSLS, _______, _______, _______, _______,
-        _______, KC_HOME, KC_END,  _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______, _______
+        KC_MUTE, KC_F1,   FR_AA2,  FR_EA3,  EURO,    KC_F5,   _______, _______, _______, FR_UA3,  FR_UA2,  FR_IA2,  FR_OA2,  _______, KC_PSCR,
+        _______, _______, _______, FR_EA1,  _______, KC_LCBR, _______, _______, _______, KC_RCBR, FR_UA1,  FR_IA1,  FR_OA1,  _______, _______,
+        KC_LGUI, FR_AA1,  _______, FR_EA2,  KC_LPRN, KC_LBRC, _______, _______, _______, KC_RBRC, KC_RPRN, KC_TILD, KC_PLUS, KC_PIPE, _______,
+        _______, _______, _______, FR_CA1,  _______, _______, _______, _______, _______, _______, _______, KC_GRV,  KC_EQL,  KC_BSLS, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     /* RAISE
@@ -160,11 +160,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_RS] = LAYOUT_ortho_5x15( /* RAISE */
-        KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
-        KC_RGUI, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_COLN, KC_DQUO, _______, _______, _______,
-        _______, _______, _______, _______, _______, _______, _______, _______, KC_LABK, KC_RABK, KC_QUES, _______, _______, _______, _______,
-        _______, KC_HOME, KC_END,  _______, _______, _______, _______, _______, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______, _______
+        KC_TILD, KC_EXLM, KC_AT,   KC_HASH, KC_DLR,  KC_PERC, _______, _______, _______, KC_CIRC, KC_AMPR, KC_ASTR, KC_LPRN, KC_RPRN, KC_UNDS,
+        _______, S(KC_Q), S(KC_W), S(KC_E), S(KC_R), S(KC_T), _______, _______, _______, S(KC_Y), S(KC_U), S(KC_I), S(KC_O), S(KC_P), _______,
+        KC_RGUI, S(KC_A), S(KC_S), S(KC_D), S(KC_F), S(KC_G), _______, _______, _______, S(KC_H), S(KC_J), S(KC_K), S(KC_L), KC_COLN, KC_DQUO,
+        _______, S(KC_Z), S(KC_X), S(KC_C), S(KC_V), S(KC_B), _______, _______, _______, S(KC_N), S(KC_M), KC_LABK, KC_RABK, KC_QUES, _______,
+        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
     /* FUNCTION
@@ -181,10 +181,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * '--------------------------------------------------------------------------------------------------------------------------------------'
      */
     [_FN] = LAYOUT_ortho_5x15( /* FUNCTION */
-        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______, _______, _______, _______,
-        _______, RESET,   UC_M_WC, _______, _______, _______, _______, RGB_MOD, RGB_HUI, RGB_VAI, RGB_SAI, BL_TOGG, _______, _______, _______,
-        KC_CAPS, _______, UC_M_MA, _______, KC_INS,  _______, _______, RGB_RMOD,RGB_HUD, RGB_VAD, RGB_SAD, _______, _______, _______, _______,
-        _______, _______, UC_M_LN, _______, _______, _______, _______, RGB_M_P, _______, _______, _______, RGB_TOG, _______, _______, _______,
+        _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______, _______, _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
+        _______, RESET,   UC_M_WC, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_HUI, RGB_VAI, RGB_SAI, BL_TOGG,
+        KC_CAPS, _______, UC_M_MA, _______, KC_INS,  _______, _______, _______, _______, _______, RGB_RMOD,RGB_HUD, RGB_VAD, RGB_SAD, _______,
+        _______, _______, UC_M_LN, _______, _______, _______, _______, _______, _______, NK_TOGG, RGB_M_P, _______, _______, _______, RGB_TOG,
         _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     )
 };
